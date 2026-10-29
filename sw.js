@@ -1,11 +1,12 @@
 // Bump VERSION whenever you change any game file, so players get the new version.
-const VERSION = 'slope-original-v1';
+const VERSION = 'slope-original-v2';
 const FILES = [
   './', './index.html', './manifest.webmanifest',
   './TemplateData/style.css', './TemplateData/UnityProgress.js', './TemplateData/unityloader41.js',
   './TemplateData/progressEmpty.Dark.png', './TemplateData/progressFull.Dark.png', './TemplateData/progressLogo.Dark.png',
   './Build/slope.json', './Build/slope_data.unityweb', './Build/slope_wasmcode.unityweb',
   './Build/slope_wasmframework.unityweb', './Build/slope_framework.unityweb', './Build/slope_memory.unityweb',
+  './mods/mods.js', './mods/mods.css', './mods/press-start-2p.ttf',
   './icons/icon-192.png', './icons/icon-512.png', './icons/apple-touch-icon.png',
 ];
 
