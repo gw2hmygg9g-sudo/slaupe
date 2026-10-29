@@ -1,5 +1,9 @@
 # Slope (original build)
 
+**Play it here: https://gw2hmygg9g-sudo.github.io/slaupe/**
+
+Open the customize menu with the button in the top right, or press M: track colour, background, weather, and ball and light-trail skins you unlock with your best score.
+
 The original Slope game (Unity WebGL build by Rob Kay, published by IDnet / Y8), taken from
 github.com/cgolden15/Slope-Game, with the ads, analytics and banner of that page removed.
 It runs full screen, works offline after the first load, and can be installed as an app.
