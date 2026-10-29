@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>Slope</title>
+  <meta name="theme-color" content="#000000">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="TemplateData/style.css">
+  <style>
+    html, body { margin: 0; height: 100%; background: #000; overflow: hidden; touch-action: none; }
+    .webgl-content, #gameContainer { position: fixed; inset: 0; width: 100%; height: 100%; }
+    #gameContainer canvas { width: 100% !important; height: 100% !important; display: block; }
+  </style>
+  <script src="TemplateData/UnityProgress.js"></script>
+  <script src="TemplateData/unityloader41.js"></script>
+</head>
+<body>
+  <div class="webgl-content"><div id="gameContainer"></div></div>
+  <script>
+    // The original Slope build (by Rob Kay, published by IDnet / Y8), without the ads and trackers of the page it came from
+    var gameInstance = UnityLoader.instantiate("gameContainer", "Build/slope.json", {
+      onProgress: UnityProgress,
+      Module: { onRuntimeInitialized: function () { UnityProgress(gameInstance, "complete"); } }
+    });
+    // Offline support: cache the game so it works without a connection and can be installed
+    if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+      window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js').catch(function () {}); });
+    }
+  </script>
+</body>
+</html>
